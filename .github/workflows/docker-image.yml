@@ -26,8 +26,10 @@ jobs:
     - name: Build Dcoker Image
       run: |
          docker build -t codigototal/docker-graphql:0.0.2 .
+         docker build -t codigototal/docker-graphql:lates .
     - name: Push Docker Image
       run: |
          docker push codigototal/docker-graphql:0.0.2
+         docker push codigototal/docker-graphql:latest
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
